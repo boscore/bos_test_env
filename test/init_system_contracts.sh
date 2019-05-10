@@ -6,6 +6,9 @@ setup_system_contracts_and_issue_token(){
     # step 1: set contract eosio.bios
     ${cleos} set contract eosio ${CONTRACTS_DIR}/eosio.bios -p eosio
 
+    # create test accounts
+    curl --data-binary '["eosio", "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"]' http://127.0.0.1:8888/v1/txn_test_gen/create_test_accounts
+
     # step 2: create system accounts
     sleep .5
     for account in eosio.bpay eosio.msig eosio.names eosio.ram eosio.ramfee \

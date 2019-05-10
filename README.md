@@ -1,6 +1,5 @@
-# eosio_test_env
 EOSIO Test Environment
-
+----------------------
 
 ### Manual
 ``` 
@@ -31,4 +30,14 @@ $ cleos system voteproducer prods eosvoterbig1 ${schedule2} -p eosvoterbig1
 Step 4: Test your task
 You can write the test process to the "task_***_test.sh" files.
 then run command `. task_***_test.sh` or test step-by-step in current shell.
+```
+
+
+### Pressure test
+``` 
+$ cd ./test
+./pressure.sh start [number]
+    start pressure test, the number of transactions per block equals 'number' * 10
+./pressure.sh stop
+    stop pressure test
 ```

@@ -32,6 +32,7 @@ plugin = eosio::producer_plugin
 plugin = eosio::chain_api_plugin
 plugin = eosio::net_plugin
 plugin = eosio::history_api_plugin
+plugin = eosio::txn_test_gen_plugin
 http-server-address = 127.0.0.1:8888
 blocks-dir = blocks
 p2p-listen-endpoint = 0.0.0.0:9777
