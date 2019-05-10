@@ -24,15 +24,15 @@ cluster_init(){
 
     path=staging/etc/eosio/node_bios
     mkdir -p $path
-    echo "$configbios"  > $path/$cName
+    echo "$configbios" > $path/$cName
     echo "$logging" > $path/$lName
-    echo "$genesis"     > $path/$gName
+    echo "$genesis" > $path/$gName
 
     for i in `seq -w 00 50`; do
         path=staging/etc/eosio/node_$i
         mkdir -p $path
         c=config$i  && echo "${!c}" > $path/$cName
-        echo "$config_common" >>  $path/$cName
+        echo "$config_common" >> $path/$cName
         l=logging && echo "${!l}" > $path/$lName
         echo "$genesis" > $path/$gName
     done
